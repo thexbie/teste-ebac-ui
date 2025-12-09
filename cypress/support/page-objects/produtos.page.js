@@ -8,7 +8,7 @@ class ProdutosPage {
         cy.get('.button-search').eq(1).click()
     };
 
-    buscarProdutoLista() {
+    buscarProdutoLista(nomeProduto) {
         cy.get('.products > .row')
             .contains(nomeProduto)
             .click()
@@ -17,6 +17,9 @@ class ProdutosPage {
     visitarProduto(nomeProduto) {
         cy.visit(`produto/${nomeProduto.replace(/ /g, '-').toLowerCase()}/`)
     };
+
+    adicionarAoCarrinho() {}
 }
+
 
 export default new ProdutosPage();

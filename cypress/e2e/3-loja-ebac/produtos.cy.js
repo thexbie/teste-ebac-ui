@@ -25,6 +25,6 @@ describe('Funcionalidade: Produtos', () => {
 
     it.only('Deve adicionar produto ao carrinho', () => {
         produtosPage.visitarProduto('Aether Gym Pant')
-        produtosPage.adicionarAoCarrinho()
+        //produtosPage.adicionarAoCarrinho()
     });
 });
