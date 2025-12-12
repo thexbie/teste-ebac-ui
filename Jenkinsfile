@@ -16,14 +16,10 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Instalar dependencias') {
-            steps {
-                sh 'npm start'
-            }
-        }
         stage('Executar Testes') {
             steps {
-                sh 'NO_COLOR=1 npm run cy:run'
+                script {
+                        sh 'npm start & sleep 10 && NO_COLOR=1 npm run cy:run'
             }
         }
     }
